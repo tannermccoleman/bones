@@ -27,7 +27,12 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 
-.nav {}
+.nav {
+	line-height: 2.25em;
+	li {
+		border-top: 1px solid $white;
+	}
+}
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {

@@ -23,6 +23,7 @@ import the mixins file so SASS can understand the variables.
 @import "partials/variables"; // import variables
 @import "partials/mixins"; // import mixins
 @import "partials/ie_grid"; // import grid
+@import "fontello/fontello_ie7"; // import fontello
 
 // import everything inside media queries
 @import "breakpoints/481up";

@@ -1,3 +1,4 @@
+@charset "IBM437";
 /*! Made with Bones: http://themble.com/bones :) */
 /******************************************************************
 Site Name:
@@ -526,6 +527,180 @@ p {
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
 
+/*
+   Animation example, for spinners
+*/
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block; }
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?3052971");
+  src: url("../fonts/fontello.eot?3052971#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?3052971") format("woff"), url("../fonts/fontello.ttf?3052971") format("truetype"), url("../fonts/fontello.svg?3052971#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?3052971#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-plus:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-minus:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-menu:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-home:before {
+  content: '\e803'; }
+
+/* '' */
+.icon-building-filled:before {
+  content: '\e804'; }
+
+/* '' */
+.icon-download:before {
+  content: '\e805'; }
+
+/* '' */
+.icon-floppy:before {
+  content: '\e806'; }
+
+/* '' */
+.icon-cancel:before {
+  content: '\e807'; }
+
+/* '' */
+.icon-ok:before {
+  content: '\e808'; }
+
+/* '' */
+.icon-link-ext:before {
+  content: '\e809'; }
+
+/* '' */
+.icon-file-pdf:before {
+  content: '\e80a'; }
+
+/* '' */
+.icon-info-circled:before {
+  content: '\e80b'; }
+
+/* '' */
+.icon-reply:before {
+  content: '\e80c'; }
+
+/* '' */
+.icon-comment:before {
+  content: '\e80d'; }
+
+/* '' */
+.icon-comment-empty:before {
+  content: '\e80e'; }
+
+/* '' */
+.icon-location:before {
+  content: '\e80f'; }
+
+/* '' */
 /******************************************************************
 Site Name:
 Author:
@@ -678,7 +853,10 @@ them however you see fit.
   .m-3of4 {
     float: left;
     padding-right: 0.75em;
-    width: 75%; } }
+    width: 75%; }
+
+  .m-hidden {
+    display: none; } }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
   .t-all {
@@ -730,7 +908,10 @@ them however you see fit.
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
-    width: 80%; } }
+    width: 80%; }
+
+  .t-hidden {
+    display: none; } }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
@@ -842,7 +1023,10 @@ them however you see fit.
   .d-1of12 {
     float: left;
     padding-right: 0.75em;
-    width: 8.33%; } }
+    width: 8.33%; }
+
+  .d-hidden {
+    display: none; } }
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -1358,12 +1542,20 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #323944; }
-
-#logo {
-  margin: 0.75em 0; }
-  #logo a {
-    color: white; }
+  color: white;
+  background-color: #00aeff; }
+  .header .hamburger {
+    font-size: 3em;
+    text-align: right; }
+  .header #logo {
+    padding-left: 10px; }
+  .header .hamburger,
+  .header #logo {
+    margin: 0;
+    line-height: 80px; }
+    .header .hamburger a,
+    .header #logo a {
+      color: white; }
 
 /*********************
 NAVIGATION STYLES
@@ -1378,10 +1570,13 @@ and more scalable.
 .nav {
   border-bottom: 0;
   margin: 0;
+  font-size: 20px;
+  line-height: 2.25em;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
   .nav li {
+    border-top: 1px solid white;
     /*
     so you really have to rethink your dropdowns for mobile.
     you don't want to have it expand too much because the
@@ -1393,7 +1588,7 @@ and more scalable.
       display: block;
       color: white;
       text-decoration: none;
-      padding: 0.75em;
+      padding: 0 0.75em;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
@@ -1533,6 +1728,9 @@ POSTS & CONTENT STYLES
 /* gallery caption styles */
 .tags {
   margin: 0; }
+
+.home #home-sections {
+  padding: 10px; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1724,7 +1922,8 @@ SIDEBARS & ASIDES
 
 .no-widgets {
   background-color: white;
-  padding: 1.5em;
+  color: #323944;
+  padding: 0.75em;
   text-align: center;
   border: 1px solid #cccccc;
   border-radius: 2px;
@@ -1735,8 +1934,8 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  background-color: white;
+  color: #323944; }
 
 /*
 if you checked out the link above:
@@ -1780,6 +1979,11 @@ tweeners.
   /*********************
   NAVIGATION STYLES
   *********************/
+  .nav {
+    line-height: 2.25em; }
+    .nav li {
+      border-top: 1px solid white; }
+
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -1862,63 +2066,68 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  .nav {
-    border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav ul {
-      background: #323944;
-      margin-top: 0; }
-    .nav li {
-      float: left;
-      position: relative;
-      /*
-      plan your menus and drop-downs wisely.
-      */
-      /* showing sub-menus */ }
-      .nav li a {
-        border-bottom: 0;
+  nav[role="navigation"] {
+    display: block !important; }
+    nav[role="navigation"] .nav {
+      border: 0;
+      float: right;
+      line-height: 80px;
+      /* end .menu ul li */
+      /* highlight current page */
+      /* end current highlighters */ }
+      nav[role="navigation"] .nav ul {
+        background: #323944;
+        margin-top: 0; }
+      nav[role="navigation"] .nav li {
+        float: left;
+        position: relative;
+        border: none;
         /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover, .nav li a:focus {
-          color: white;
-          text-decoration: underline; }
-      .nav li ul.sub-menu,
-      .nav li ul.children {
-        margin-top: 0;
-        border: 1px solid #ccc;
-        border-top: 0;
-        position: absolute;
-        visibility: hidden;
-        z-index: 8999;
-        /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
+        plan your menus and drop-downs wisely.
+        */
+        /* showing sub-menus */ }
+        nav[role="navigation"] .nav li a {
+          border-bottom: 0;
           /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
+          you can use hover styles here even though this size
+          has the possibility of being a mobile device.
           */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
-            padding-left: 10px;
-            border-right: 0;
-            display: block;
-            width: 180px;
-            border-bottom: 1px solid #ccc; }
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
-            border-bottom: 0; }
-          .nav li ul.sub-menu li ul,
-          .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
-      .nav li:hover > ul {
-        top: auto;
-        visibility: visible; }
+          nav[role="navigation"] .nav li a:hover, nav[role="navigation"] .nav li a:focus {
+            color: white;
+            text-decoration: underline; }
+        nav[role="navigation"] .nav li ul.sub-menu,
+        nav[role="navigation"] .nav li ul.children {
+          margin-top: 0;
+          border: 1px solid #ccc;
+          border-top: 0;
+          position: absolute;
+          visibility: hidden;
+          z-index: 8999;
+          /* highlight sub-menu current page */ }
+          nav[role="navigation"] .nav li ul.sub-menu li,
+          nav[role="navigation"] .nav li ul.children li {
+            /*
+            if you need to go deeper, go nuts
+            just remember deeper menus suck
+            for usability. k, bai.
+            */ }
+            nav[role="navigation"] .nav li ul.sub-menu li a,
+            nav[role="navigation"] .nav li ul.children li a {
+              padding-left: 10px;
+              border-right: 0;
+              display: block;
+              width: 180px;
+              border-bottom: 1px solid #ccc; }
+            nav[role="navigation"] .nav li ul.sub-menu li:last-child a,
+            nav[role="navigation"] .nav li ul.children li:last-child a {
+              border-bottom: 0; }
+            nav[role="navigation"] .nav li ul.sub-menu li ul,
+            nav[role="navigation"] .nav li ul.children li ul {
+              top: 0;
+              left: 100%; }
+        nav[role="navigation"] .nav li:hover > ul {
+          top: auto;
+          visibility: visible; }
 
   /* end .nav */
   /*********************
